@@ -59,7 +59,6 @@ public class PessoaController {
 		Pessoa pessoa = pessoaRepository.findById(pessoaId)
 				.orElseThrow(() -> new ResourceNotFoundException("Pessoa", "id", pessoaId));
 		pessoaRepository.delete(pessoa);
-
 		return ResponseEntity.ok().build();
 	}
 }
