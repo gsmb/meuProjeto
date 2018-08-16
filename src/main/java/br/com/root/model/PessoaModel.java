@@ -1,7 +1,5 @@
 package br.com.root.model;
 
-import java.util.Calendar;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,9 +10,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table (name = "tabela_pessoa")
-public class Pessoa {
+public class PessoaModel {
 	
-	public Pessoa () {
+	public PessoaModel () {
 		
 	}
 	
@@ -35,7 +33,7 @@ public class Pessoa {
 	private String endereco;
 	
 	@Column (name="DATA_NASCIMENTO", nullable=false, length=11)
-	private Calendar dataNascimento;
+	private String dataNascimento;
 	
 	@Column (name = "CPF", nullable=false, length=11)
 	private String cpf;
@@ -72,10 +70,10 @@ public class Pessoa {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Calendar getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Calendar dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getCpf() {
@@ -84,8 +82,6 @@ public class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	
 	
 	@Override
 	public int hashCode() {
@@ -108,7 +104,7 @@ public class Pessoa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
+		PessoaModel other = (PessoaModel) obj;
 		if (cpf == null) {
 			if (other.cpf != null)
 				return false;

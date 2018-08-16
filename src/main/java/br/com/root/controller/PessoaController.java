@@ -1,6 +1,10 @@
 package br.com.root.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import javax.validation.Valid;
 
@@ -16,7 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.root.exception.ResourceNotFoundException;
-import br.com.root.model.Pessoa;
+import br.com.root.model.PessoaModel;
+import br.com.root.model.ResponseModel;
 import br.com.root.repository.PessoaRepository;
 
 @RestController
@@ -27,36 +32,45 @@ public class PessoaController {
 	PessoaRepository pessoaRepository;
 
 	@GetMapping("/pessoas")
-	public List<Pessoa> getAllPessoas() {
+	public List<PessoaModel> getAllPessoas() {
 		return pessoaRepository.findAll();
 	}
 
-	@PostMapping("pessoas")
-	public Pessoa criarPessoa(@RequestBody Pessoa pessoa) {
-		return pessoaRepository.save(pessoa);
+	@PostMapping("/pessoas")
+	public ResponseModel criarPessoa(@RequestBody PessoaModel pessoa) throws ParseException {
+		
+		try {
+			Calendar cal = Calendar.getInstance();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+			cal.setTime(sdf.parse(pessoa.getDataNascimento()));// all done
+			this.pessoaRepository.save(pessoa);
+			return new ResponseModel(1, "Resgistro Salvo com Sucesso");
+		} catch (Exception e) {
+			return new ResponseModel(0, e.getMessage());
+		} 
 	}
 
 	@GetMapping("/pessoas/{id}")
-	public Pessoa obterPessoa(@PathVariable(value = "id") Long pessoaId) {
+	public PessoaModel obterPessoa(@PathVariable(value = "id") Long pessoaId) {
 		return pessoaRepository.findById(pessoaId)
 				.orElseThrow(() -> new ResourceNotFoundException("Pessoa", "id", pessoaId));
 	}
 
 	@PutMapping("/pessoas/{id}")
-	public Pessoa atualizarPessoa(@PathVariable(value = "id") Long pessoaId,
-			@Valid @RequestBody Pessoa pessoaDetalhes) {
+	public PessoaModel atualizarPessoa(@PathVariable(value = "id") Long pessoaId,
+			@Valid @RequestBody PessoaModel pessoaDetalhes) {
 
-		Pessoa pessoa = pessoaRepository.findById(pessoaId)
+		PessoaModel pessoa = pessoaRepository.findById(pessoaId)
 				.orElseThrow(() -> new ResourceNotFoundException("Pessoa", "id", pessoaId));
 
-		Pessoa pessoaAtualizada = pessoaRepository.save(pessoa);
+		PessoaModel pessoaAtualizada = pessoaRepository.save(pessoaDetalhes);
 		return pessoaAtualizada;
 
 	}
 
 	@DeleteMapping("/pessoas/{id}")
 	public ResponseEntity<?> apagandoPessoa(@PathVariable(value = "id") Long pessoaId) {
-		Pessoa pessoa = pessoaRepository.findById(pessoaId)
+		PessoaModel pessoa = pessoaRepository.findById(pessoaId)
 				.orElseThrow(() -> new ResourceNotFoundException("Pessoa", "id", pessoaId));
 		pessoaRepository.delete(pessoa);
 		return ResponseEntity.ok().build();
