@@ -1,5 +1,10 @@
 package br.com.root.model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -82,6 +87,13 @@ public class PessoaModel {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+	
+	public void formatarData() throws ParseException {
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+		cal.setTime(sdf.parse(getDataNascimento()));
+	}
+	
 	
 	@Override
 	public int hashCode() {
