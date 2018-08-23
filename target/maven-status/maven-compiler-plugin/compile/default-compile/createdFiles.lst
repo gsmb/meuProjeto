@@ -1,0 +1,9 @@
+br/com/root/MeuProgramaApplication.class
+br/com/root/service/PessoaService.class
+br/com/root/repository/PessoaRepository.class
+br/com/root/controller/PessoaController.class
+br/com/root/model/PessoaModel.class
+br/com/root/exception/ResourceNotFoundException.class
+br/com/root/utils/CpfCnpjUtils.class
+br/com/root/controller/InicioController.class
+br/com/root/model/ResponseModel.class
