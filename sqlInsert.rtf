@@ -1,0 +1,178 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1664
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red127\green0\blue85;\red204\green204\blue204;\red64\green0\blue200;
+\red0\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c80000\c80000\c80000;\csgenericrgb\c25098\c0\c78431;
+\csgenericrgb\c0\c0\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24220\viewh12620\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 \
+create
+\f1\b0 \cf3  
+\f0\b \cf2 table
+\f1\b0 \cf3  \cf0 tabela_pessoa\cf3  \cf0 (\
+\cf3 	\cf0 ID\cf3  
+\f0\b \cf4 int
+\f1\b0 \cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf3  
+\f0\b \cf2 PRIMARY
+\f1\b0 \cf3  
+\f0\b \cf2 KEY
+\f1\b0 \cf0 ,\
+\cf3 	\cf0 NOME\cf3  
+\f0\b \cf2 varchar
+\f1\b0 \cf0 (100)\cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf0 ,\
+\cf3 	\cf0 IDADE\cf3  
+\f0\b \cf4 int
+\f1\b0 \cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf0 ,\
+\cf3 	\cf0 SEXO\cf3  
+\f0\b \cf2 varchar
+\f1\b0 \cf0 (1)\cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf0 ,\
+\cf3 	\cf0 ENDERECO\cf3  
+\f0\b \cf2 varchar
+\f1\b0 \cf0 (300)\cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf0 ,\
+\cf3 	\cf0 DATA_NASCIMENTO\cf3  
+\f0\b \cf2 date
+\f1\b0 \cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf0 ,\
+\cf3 	\cf0 CPF\cf3  
+\f0\b \cf2 varchar
+\f1\b0 \cf0 (11)\cf3  
+\f0\b \cf2 NOT
+\f1\b0 \cf3  
+\f0\b \cf4 NULL
+\f1\b0 \cf0 \
+\cf3 	\cf0 \
+);
+\f0\b \cf2 \
+\
+\
+\
+INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0(1, \cf5 \'92Gabriel'\cf0 ,\'a025,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 ,\cf3  \cf5 '29-11-1992'\cf0 ,\cf3  \cf5 '14755976731'\cf0 );\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa\'a0(ID,\'a0NOME,\'a0IDADE,\cf3  \cf0 SEXO,\cf3  \cf0 ENDERECO,\cf3  \cf0 DATA_NASCIMENTO,\cf3  \cf0 CPF)\
+
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0(3,\'a0\cf5 'J\'e9ssica'\cf0 ,\'a027,\cf3  \cf5 'F'\cf0 ,\cf5 'Rua 24'\cf0 ,\cf3  \cf5 '18-04-1991'\cf0 ,\cf3  \cf5 '12345678998'\cf0 );\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa\'a0(ID,\'a0NOME,\'a0IDADE,\cf3  \cf0 SEXO,\cf3  \cf0 ENDERECO,\cf3  \cf0 DATA_NASCIMENTO,\cf3  \cf0 CPF)\
+
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0(4,\'a0\cf5 'Fabian'\cf0 ,\'a032,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua 26'\cf0 ,\cf3  \cf5 '17-05-1987'\cf0 ,\cf3  \cf5 '32145698711'\cf0 );\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa\'a0(ID,\'a0NOME,\'a0IDADE,\cf3  \cf0 SEXO,\cf3  \cf0 ENDERECO,\cf3  \cf0 DATA_NASCIMENTO,\cf3  \cf0 CPF)\
+
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0(5,\'a0\cf5 'Kevyn'\cf0 ,\'a020,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua Maisa'\cf0 ,\cf3  \cf5 '01-07-1999'\cf0 ,\cf3  \cf5 '85214796321'\cf0 );\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa\'a0(ID,\'a0NOME,\'a0IDADE,\cf3  \cf0 SEXO,\cf3  \cf0 ENDERECO,\cf3  \cf0 DATA_NASCIMENTO,\cf3  \cf0 CPF)\
+
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0(6,\'a0\cf5 'Romero'\cf0 ,\'a035,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua 56'\cf0 ,\cf3  \cf5 '01-01-1985'\cf0 ,\cf3  \cf5 '95175365485'\cf0 );\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa\'a0(ID,\'a0NOME,\'a0IDADE,\cf3  \cf0 SEXO,\cf3  \cf0 ENDERECO,\cf3  \cf0 DATA_NASCIMENTO,\cf3  \cf0 CPF)\
+
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0(7,\'a0\cf5 'Maria Joaquina'\cf0 ,\'a085,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 ,\cf3  \cf5 '14\'9609-1945'\cf0 ,\cf3  \cf5 '96374125413'\cf0 );\
+\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa\'a0(ID,\'a0NOME,\'a0IDADE,\cf3  \cf0 SEXO,\cf3  \cf0 ENDERECO,\cf3  \cf0 DATA_NASCIMENTO,\cf3  \cf0 CPF)\
+
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0\
+(1, \cf5 \'92Gabriel'\cf0 ,\'a025,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 ,\cf3  \cf5 '29-11-1992'\cf0 ,\cf3  \cf5 '14755976731\'92\cf0 ),\
+(3,\'a0\cf5 'J\'e9ssica'\cf0 ,\'a027,\cf3  \cf5 'F'\cf0 ,\cf5 'Rua 24'\cf0 ,\cf3  \cf5 '18-04-1991'\cf0 ,\cf3  \cf5 '12345678998\'92\cf0 ),\
+(4,\'a0\cf5 'Fabian'\cf0 ,\'a032,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua 26'\cf0 ,\cf3  \cf5 '17-05-1987'\cf0 ,\cf3  \cf5 '32145698711\'92\cf0 ),\
+(5,\'a0\cf5 'Kevyn'\cf0 ,\'a020,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua Maisa'\cf0 ,\cf3  \cf5 '01-07-1999'\cf0 ,\cf3  \cf5 '85214796321\'92\cf0 ),\
+(6,\'a0\cf5 'Romero'\cf0 ,\'a035,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua 56'\cf0 ,\cf3  \cf5 '01-01-1985'\cf0 ,\cf3  \cf5 '95175365485\'92\cf0 ),\
+(7,\'a0\cf5 'Maria Joaquina'\cf0 ,\'a085,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 ,\cf3  \cf5 '14\'9609-1945'\cf0 ,\cf3  \cf5 '96374125413'\cf0 );\
+\
+\
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf0 \'a0
+\f0\b \cf2 INTO
+\f1\b0 \cf0 \'a0tabela_pessoa 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \'a0\
+(\cf5 \'92Gabriel'\cf0 ,\'a025,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 ,\cf3  \cf5 '29-11-1992'\cf0 ,\cf3  \cf5 '14755976731\'92\cf0 ),\
+(\cf5 'J\'e9ssica'\cf0 ,\'a027,\cf3  \cf5 'F'\cf0 ,\cf5 'Rua 24'\cf0 ,\cf3  \cf5 '18-04-1991'\cf0 ,\cf3  \cf5 '12345678998\'92\cf0 ),\
+(\cf5 'Fabian'\cf0 ,\'a032,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua 26'\cf0 ,\cf3  \cf5 '17-05-1987'\cf0 ,\cf3  \cf5 '32145698711\'92\cf0 ),\
+(\cf5 'Kevyn'\cf0 ,\'a020,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua Maisa'\cf0 ,\cf3  \cf5 '01-07-1999'\cf0 ,\cf3  \cf5 '85214796321\'92\cf0 ),\
+(\cf5 'Romero'\cf0 ,\'a035,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua 56'\cf0 ,\cf3  \cf5 '01-01-1985'\cf0 ,\cf3  \cf5 '95175365485\'92\cf0 ),\
+(\cf5 'Maria Joaquina'\cf0 ,\'a085,\cf3  \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 ,\cf3  \cf5 '14\'9609-1945'\cf0 ,\cf3  \cf5 '96374125413'\cf0 );\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs22 \cf2 INSERT\cf0  \cf2 INTO\cf0  tabela_pessoa \cf2 VALUES\cf0  \
+(\cf5 'Gabriel'\cf0 ,\'a025, \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 , \cf5 '29-11-1992'\cf0 , \cf5 '14755976731\'92),\cf0 \
+\
+\cf5 INSERT\'a0INTO\'a0tabela_pessoa (NOME, IDADE, SEXO, ENDERECO, DATA_NASCIMENTO, CPF) VALUES\'a0('\cf0 Gabriel\cf5 ',\'a025, '\cf0 M\cf5 ','\cf0 Rua S\'e3o Joao da Barra\cf5 ', '\cf0 29-11-1992\cf5 ', '\cf0 14755976731\'92);\
+\cf2 INSERT\cf0 \'a0\cf2 INTO\cf0 \'a0tabela_pessoa (NOME, IDADE, SEXO, ENDERECO, DATA_NASCIMENTO, CPF) \cf2 VALUES\cf0 \'a0(\cf5 'J\'e9ssica'\cf0 ,\'a027, \cf5 'F'\cf0 ,\cf5 'Rua 24'\cf0 , \cf5 '18-04-1991'\cf0 , \cf5 '12345678998'\cf0 );\
+\cf2 INSERT\cf0 \'a0\cf2 INTO\cf0 \'a0tabela_pessoa (NOME, IDADE, SEXO, ENDERECO, DATA_NASCIMENTO, CPF) \cf2 VALUES\cf0 \'a0(\cf5 'Fabian'\cf0 ,\'a032, \cf5 'M'\cf0 ,\cf5 'Rua 26'\cf0 , \cf5 '17-05-1987'\cf0 , \cf5 '32145698711'\cf0 );\
+\cf2 INSERT\cf0 \'a0\cf2 INTO\cf0 \'a0tabela_pessoa (NOME, IDADE, SEXO, ENDERECO, DATA_NASCIMENTO, CPF) \cf2 VALUES\cf0 \'a0(\cf5 'Kevyn'\cf0 ,\'a020, \cf5 'M'\cf0 ,\cf5 'Rua Maisa'\cf0 , \cf5 '01-07-1999'\cf0 , \cf5 '85214796321\'92);\cf0 \
+\cf5 INSERT\'a0INTO\'a0tabela_pessoa (NOME, IDADE, SEXO, ENDERECO, DATA_NASCIMENTO, CPF) VALUES\'a0('\cf0 Romero\cf5 ',\'a035, '\cf0 M\cf5 ','\cf0 Rua 56\cf5 ', '\cf0 01-01-1985\cf5 ', '\cf0 95175365485\'92);\
+\cf2 INSERT\cf0 \'a0\cf2 INTO\cf0 \'a0tabela_pessoa (NOME, IDADE, SEXO, ENDERECO, DATA_NASCIMENTO, CPF) \cf2 VALUES\cf0 \'a0(\cf5 'Maria Joaquina'\cf0 ,\'a085, \cf5 'M'\cf0 ,\cf5 'Rua S\'e3o Joao da Barra'\cf0 , \cf5 '14\'9609-1945'\cf0 , \cf5 '96374125413'\cf0 );}
