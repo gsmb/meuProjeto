@@ -28,9 +28,6 @@ public class PessoaModel {
 	@Column (name="NOME", nullable=false, length=100)
 	private String nome;
 	
-	@Column (name="IDADE", length=3)
-	private int idade;
-	
 	@Column (name="SEXO", nullable=false, length=1)
 	private char sexo;
 	
@@ -57,12 +54,6 @@ public class PessoaModel {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getIdade() {
-		return idade;
-	}
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
 	public char getSexo() {
 		return sexo;
 	}
@@ -81,6 +72,7 @@ public class PessoaModel {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -88,10 +80,11 @@ public class PessoaModel {
 		this.cpf = cpf;
 	}
 	
-	public void formatarData() throws ParseException {
+	public String formatarData(String dataNascimentoFormatada) throws ParseException {
 		Calendar cal = Calendar.getInstance();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
 		cal.setTime(sdf.parse(getDataNascimento()));
+		return dataNascimentoFormatada;
 	}
 	
 	
@@ -103,7 +96,6 @@ public class PessoaModel {
 		result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
 		result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
 		result = prime * result + (int) (id ^ (id >>> 32));
-		result = prime * result + idade;
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + sexo;
 		return result;
@@ -133,8 +125,6 @@ public class PessoaModel {
 		} else if (!endereco.equals(other.endereco))
 			return false;
 		if (id != other.id)
-			return false;
-		if (idade != other.idade)
 			return false;
 		if (nome == null) {
 			if (other.nome != null)
